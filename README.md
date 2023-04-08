@@ -1,45 +1,65 @@
-Azure Infrastructure Operations Project: Deploying a scalable IaaS web server in Azure
-Introduction
-For this project, you will write a Packer template and a Terraform template to deploy a customizable, scalable web server in Azure.
+# Azure Infrastructure Operations: Deploying a Web Server in Azure
 
-Getting Started
-Clone this repository
+## Introduction
+For this project, we customize Packer template and a Terraform template to aim at deploying a Web Server in Azure.
 
-Create your infrastructure as code
+## Dependencies
++ An Azure account
++ Packer template
++ Terraform template
 
-Update this README to reflect how someone would use your code.
+## Instructions
+### Create Image Packer
+- File: packer/server.json
+- Use command to create image for virtual machine
+``` packer build packer/server.json ```
 
-Dependencies
-Create an Azure Account
-Install the Azure command line interface
-Install Packer
-Install Terraform
-Instructions
-We will need to:
-
-Create an Packer image.
+### Terraform Template
 Create infrastructure with Terraform template.
-Packer Image
-Run command to create packer image packer build server.json
+- File: main.tf => declare the resouces
+- File: vars.tf => declare variable
 
-Terraform Template
-Implement code
-Create a file main.tf to create
-Create a file vars.tf to contain the variables
-Initialize Terraform deployment
-Run: terraform init to start
-Terraform execution plan
-Terraform plan command creates plan
-Run: terraform plan -out solution.plan  The -out parameter allows specifying of the output file and review of the plan
-Apply a Terraform plan
-Terraform apply command to execute plan to infrastructure
-Run: terraform apply solution.plan
-How to customize vars.tf
-Ex: If you want to deploy on other servers, you need to change values default in vars.tf file
+Use some command below to init and deploy terraform
+- Get started
+``` terraform init ```
 
+- Initialize a directory containing Terraform
+``` terraform plan [option] ```
+
+- Save the plan solutions file use this command
+``` terraform plan -out solutions.plan ```
+
+- Deploy terraform infrastructure
+``` terraform apply "solutions.plan" or terraform apply main.tf ```
+
+### Customize vars.tf
+This file contains all the variables used inside the terraform/main.tf. If you want to deploy on other servers, you need to change values default inside the file.
   variable "server_names"{
   type = list
   default = ["<Server_1>","Server_2"]
 }
-Output
+### Output
+Azure login
+
+![az login](https://user-images.githubusercontent.com/50509460/230714172-c57ae202-d396-49df-b47e-96c04258bed1.PNG)
+
+Packer Build
+
+![packer build](https://user-images.githubusercontent.com/50509460/230714193-6a9b5e1e-6d1c-4fb6-946a-9d54ff2eb2d0.PNG)
+
+Init Terraform
+
+![terraform init](https://user-images.githubusercontent.com/50509460/230714264-8abb9dc9-b00a-4609-bd02-f517106c979b.PNG)
+
+Terraform Plan out
+
+![terraform plan out](https://user-images.githubusercontent.com/50509460/230714295-101bdb93-04bd-474c-b3e2-e07240691ebc.PNG)
+
+Terraform apply solution
+
+![terraform apply solution](https://user-images.githubusercontent.com/50509460/230714314-bb8e8c94-3031-4c32-b8fe-3f0e256528ab.PNG)
+
 Terraform will perform: terraform out put
+
+![output](https://user-images.githubusercontent.com/50509460/230714150-2d6b2682-1996-40b8-a866-6c4c5d701dea.PNG)
+
