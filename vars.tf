@@ -32,7 +32,7 @@ variable "server_names"{
 }
 
 variable "packerImageId"{
-  default = "e7a256dc-769a-421c-9f8e-e283ed3cbefa"
+  default = "/subscriptions/e7a256dc-769a-421c-9f8e-e283ed3cbefa/resourceGroups/AZUREDEVOPS/providers/Microsoft.Compute/images/myPackerImage"
 }
 
 variable "vmCount"{
