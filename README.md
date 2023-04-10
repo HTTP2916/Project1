@@ -47,6 +47,9 @@ Packer Build
 
 ![packer build](https://user-images.githubusercontent.com/50509460/230714193-6a9b5e1e-6d1c-4fb6-946a-9d54ff2eb2d0.PNG)
 
+Azure Image List
+![az image list](https://user-images.githubusercontent.com/50509460/230920660-5df586dd-eece-4307-b5ed-add112c30bd9.png)
+
 Init Terraform
 
 ![terraform init](https://user-images.githubusercontent.com/50509460/230714264-8abb9dc9-b00a-4609-bd02-f517106c979b.PNG)
