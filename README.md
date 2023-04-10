@@ -48,6 +48,7 @@ Packer Build
 ![packer build](https://user-images.githubusercontent.com/50509460/230714193-6a9b5e1e-6d1c-4fb6-946a-9d54ff2eb2d0.PNG)
 
 Azure Image List
+
 ![az image list](https://user-images.githubusercontent.com/50509460/230920660-5df586dd-eece-4307-b5ed-add112c30bd9.png)
 
 Init Terraform
